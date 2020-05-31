@@ -1,0 +1,491 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.container,
+.search {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  width: 100%;
+  background: #18181b;
+  padding: 22px 0;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .container #burgerMenu {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+nav .container .menu a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  margin-right: 17px;
+  -webkit-transition: color 600ms ease-in-out;
+  transition: color 600ms ease-in-out;
+  font-weight: 600;
+}
+
+nav .container .menu a:hover, nav .container .menu a.active {
+  color: purple;
+}
+
+.main {
+  width: 100%;
+  min-height: calc(100vh - 66px);
+  background: -webkit-gradient(linear, left bottom, left top, from(#180a58), to(#3a4fbc));
+  background: linear-gradient(0deg, #180a58, #3a4fbc);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .container {
+  margin: auto;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.main .container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 380px;
+}
+
+.main .container .wrapper.second {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.main .container .wrapper img {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: block;
+}
+
+.main .container .wrapper .info {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  padding: 0 40px;
+  background: #18181b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .container .wrapper .info p {
+  margin: 24px 0 0 0;
+  line-height: 1.5;
+}
+
+.output {
+  width: 100%;
+  padding: 40px 0;
+  min-height: calc(100vh - 66px);
+  background: -webkit-gradient(linear, left bottom, left top, from(#180a58), to(#3a4fbc));
+  background: linear-gradient(0deg, #180a58, #3a4fbc);
+  color: #fff;
+  font-size: 50px;
+}
+
+.output .search {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.output .search input,
+.output .search button {
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.output .search input {
+  width: 100%;
+  max-width: 240px;
+  background: #34344e;
+  padding: 0 14px;
+  color: #fff;
+}
+
+.output .search input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.output .search input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.output .search input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.output .search input::placeholder {
+  color: #fff;
+}
+
+.output .search button {
+  width: 100%;
+  max-width: 120px;
+  background: #800080;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background 400ms ease-in-out;
+  transition: background 400ms ease-in-out;
+}
+
+.output .search button:hover {
+  background: #8c0d8c;
+}
+
+.output .container h1 {
+  font-size: 28px;
+  color: #d07070;
+}
+
+.output .container .pokemonCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background: #18181b;
+  padding: 30px;
+}
+
+.output .container .pokemonCard .pokemonInfo {
+  width: 100%;
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+}
+
+.output .container .pokemonCard .pokemonInfo .pokemonImg {
+  height: 250px;
+  width: 100%;
+  background: #262438;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.output .container .pokemonCard .pokemonInfo .pokemonImg img {
+  width: 140px;
+  height: 140px;
+  display: block;
+}
+
+.output .container .pokemonCard .pokemonInfo .pokemonName {
+  background: purple;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.output .container .pokemonCard .pokemonInfo .pokemonName h2 {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.output .container .pokemonCard .pokemonMoves {
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+.output .container .pokemonCard .pokemonMoves h2 {
+  font-size: 24px;
+}
+
+.output .container .pokemonCard .pokemonMoves .pokemonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.output .container .pokemonCard .pokemonMoves .pokemonWrapper p {
+  font-size: 17px;
+  margin: 4px 0;
+}
+
+.output .container .pokemonCard .pokemonMoves .pokemonWrapper p:last-of-type span {
+  display: none;
+}
+
+.output .container .pokemonCard .pokemonMoves .pokemonWrapper p span {
+  margin-right: 5px;
+}
+
+.output .container .pokemonDesc {
+  width: 100%;
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.output .container .pokemonDesc .row {
+  width: 100%;
+  max-width: 50%;
+}
+
+.output .container .pokemonDesc .row h2 {
+  font-size: 24px;
+}
+
+.output .container .pokemonDesc .row h2.stats {
+  margin: 16px 0 0 0;
+}
+
+.output .container .pokemonDesc .row p {
+  font-size: 14px;
+  margin: 4px 0;
+  text-transform: capitalize;
+}
+
+.output .container .pokemonDesc .row p span {
+  color: purple;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.rentalTeams {
+  width: 100%;
+  padding: 40px 0;
+  min-height: calc(100vh - 66px);
+  background: -webkit-gradient(linear, left bottom, left top, from(#180a58), to(#3a4fbc));
+  background: linear-gradient(0deg, #180a58, #3a4fbc);
+}
+
+.rentalTeams h3 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+}
+
+.rentalTeams .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0 0 0;
+}
+
+.rentalTeams .container img {
+  width: 480px;
+  height: 300px;
+  display: block;
+}
+
+.rentalTeams .container img:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 810px) {
+  nav .container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav .container .menu {
+    width: 100%;
+    max-width: 340px;
+    min-height: 100vh;
+    background: #18181b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 50px;
+    -webkit-transition: left 600ms ease-in-out;
+    transition: left 600ms ease-in-out;
+  }
+  nav .container .menu.hidden {
+    left: -500px;
+  }
+  nav .container .menu a {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+  nav .container #burgerMenu {
+    display: block;
+  }
+  .main {
+    min-height: 100vh;
+  }
+  .main .container {
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .main .container .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 600px;
+  }
+  .main .container .wrapper .info,
+  .main .container .wrapper img {
+    max-width: 100%;
+    height: 300px;
+  }
+  .main .container .wrapper.second {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 30px 0 0 0;
+  }
+  .output .container .pokemonCard .pokemonInfo,
+  .output .container .pokemonCard .pokemonDesc {
+    max-width: 100%;
+  }
+  .output .container .pokemonCard .pokemonDesc {
+    padding: 20px 0 0 0;
+  }
+  .output .container .pokemonCard .pokemonMoves .pokemonWrapper p {
+    font-size: 15px;
+  }
+  .rentalTeams .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .rentalTeams .container img {
+    width: 100%;
+    height: auto;
+  }
+  .rentalTeams .container img:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 811px) and (max-width: 1100px) {
+  .main .container .wrapper {
+    height: 380px;
+  }
+  .main .container .wrapper .info,
+  .main .container .wrapper img {
+    max-width: 50%;
+    height: 100%;
+  }
+  .output .container .pokemonCard .pokemonInfo,
+  .output .container .pokemonCard .pokemonDesc {
+    max-width: 47%;
+  }
+  .rentalTeams .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .rentalTeams .container img {
+    width: 48%;
+    height: 250px;
+  }
+  .rentalTeams .container img:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container,
+  .search {
+    max-width: 90%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
